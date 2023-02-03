@@ -1939,6 +1939,9 @@
 
                                     <StackPanel Orientation="Horizontal" Margin="0,8,0,8">
                                         <Button x:Name="gyroCalBtn1" Content="Gyro Calibration" Width="100"  Click="GyroCalibration_Click" />
+                                        <Slider x:Name="gyroYawOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroYawOffsetSlider_ValueChanged" Value="67"/>
+                                        <Slider x:Name="gyroPitchOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroPitchOffsetSlider_ValueChanged"/>
+                                        <Slider x:Name="gyroRollOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroRollOffsetSlider_ValueChanged"/>
                                     </StackPanel>
                                 </StackPanel>
                             </TabItem>

@@ -251,5 +251,7 @@
                 </StackPanel>
             </Border>
         </Grid>
+        <Label x:Name="gyroYawPrint" Content="GyroYawReading" Width="104"/>
+        <Label x:Name="gyroPitchPrint" Content="GyroPitchReading" Width="104"/>
     </DockPanel>
 </UserControl>

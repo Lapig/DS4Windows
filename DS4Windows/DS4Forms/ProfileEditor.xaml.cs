@@ -1607,6 +1607,34 @@ namespace DS4WinWPF.DS4Forms
             mpControl.UpdateMappingName();
             Global.CacheProfileCustomsFlags(profileSettingsVM.Device);
         }
+
+        private void gyroYawOffsetSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int deviceNum = 0;//ControlService.
+            if (deviceNum < ControlService.CURRENT_DS4_CONTROLLER_LIMIT)
+            {
+                DS4Device d = App.rootHub.DS4Controllers[deviceNum];
+                d.SixAxis.gyroYawOffset = (int)e.NewValue;
+            }
+        } 
+        private void gyroPitchOffsetSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int deviceNum = 0;//profileSettingsVM.FuncDevNum;
+            if (deviceNum < ControlService.CURRENT_DS4_CONTROLLER_LIMIT)
+            {
+                DS4Device d = App.rootHub.DS4Controllers[deviceNum];
+                d.SixAxis.gyroPitchOffset = (int)e.NewValue;
+            }
+        } 
+        private void gyroRollOffsetSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            int deviceNum = 0;// profileSettingsVM.FuncDevNum;
+            if (deviceNum < ControlService.CURRENT_DS4_CONTROLLER_LIMIT)
+            {
+                DS4Device d = App.rootHub.DS4Controllers[deviceNum];
+                d.SixAxis.gyroRollOffset = (int)e.NewValue;
+            }
+        }
     }
 
     public class ControlIndexCheck

@@ -304,6 +304,9 @@ namespace DS4WinWPF.DS4Forms
                     gyroPitchSlider.Value = baseState.Motion.gyroPitchFull;
                     gyroRollSlider.Value = baseState.Motion.gyroRollFull;
 
+                    gyroYawPrint.Content = gyroYawSlider.Value;
+                    gyroPitchPrint.Content = gyroPitchSlider.Value;
+
                     accelXSlider.Value = exposeState.getAccelX();
                     accelYSlider.Value = exposeState.getAccelY();
                     accelZSlider.Value = exposeState.getAccelZ();
