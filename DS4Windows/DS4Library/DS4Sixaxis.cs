@@ -190,7 +190,7 @@ namespace DS4Windows
             }
         }
 
-        public int gyroYawOffset=70, gyroPitchOffset, gyroRollOffset;
+        public int gyroYawOffset=70, gyroPitchOffset=0, gyroRollOffset=0;
 
         public DS4SixAxis()
         {
@@ -322,7 +322,7 @@ namespace DS4Windows
                     CalcSensorCamples(ref currentYaw, ref currentPitch, ref currentRoll, ref AccelX, ref AccelY, ref AccelZ);
                 }
 
-                currentYaw -= gyro_offset_x+ gyroYawOffset;
+                currentYaw -= gyro_offset_x + gyroYawOffset;
                 currentPitch -= gyro_offset_y + gyroPitchOffset;
                 currentRoll -= gyro_offset_z + gyroRollOffset;
 

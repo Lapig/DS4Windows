@@ -1939,9 +1939,12 @@
 
                                     <StackPanel Orientation="Horizontal" Margin="0,8,0,8">
                                         <Button x:Name="gyroCalBtn1" Content="Gyro Calibration" Width="100"  Click="GyroCalibration_Click" />
-                                        <Slider x:Name="gyroYawOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroYawOffsetSlider_ValueChanged" Value="67"/>
-                                        <Slider x:Name="gyroPitchOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroPitchOffsetSlider_ValueChanged"/>
-                                        <Slider x:Name="gyroRollOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroRollOffsetSlider_ValueChanged"/>
+                                        <TextBlock Text="{Binding ElementName=gyroYawOffsetSlider, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" MinWidth="20" MaxWidth="20"/>
+                                        <Slider x:Name="gyroYawOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroYawOffsetSlider_ValueChanged" Value="70"/>
+                                        <TextBlock Text="{Binding Value, ElementName=gyroPitchOffsetSlider, StringFormat={}{0:0}}" HorizontalAlignment="Center" MinWidth="20" MaxWidth="20"/>
+                                        <Slider x:Name="gyroPitchOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroPitchOffsetSlider_ValueChanged" Value="0"/>
+                                        <TextBlock Text="{Binding ElementName=gyroRollOffsetSlider, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" MinWidth="20" MaxWidth="20"/>
+                                        <Slider x:Name="gyroRollOffsetSlider" Width="120" SmallChange="1" LargeChange="10" Maximum="100" Minimum="-100" ValueChanged="gyroRollOffsetSlider_ValueChanged" Value="0"/>
                                     </StackPanel>
                                 </StackPanel>
                             </TabItem>
